@@ -8,10 +8,11 @@ public class Maquina {
 	private double capacidadMaxima;
 	private double cantidadActual;
 	private String codigo;
+	private String descripcionUnitaria;
 	
 	
 	public Maquina () {};
-
+	
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima,String codigo) {
 
 		this.nombreCerveza = nombreCerveza;
@@ -20,6 +21,20 @@ public class Maquina {
 		this.capacidadMaxima = capacidadMaxima;
 		this.cantidadActual = 0;
 		this.codigo= codigo;
+		
+
+	}
+
+
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima,String codigo,String descripcionUnitaria) {
+
+		this.nombreCerveza = nombreCerveza;
+		this.descripcion = descripcion;
+		this.precioPorMl = precioPorMl;
+		this.capacidadMaxima = capacidadMaxima;
+		this.cantidadActual = 0;
+		this.codigo= codigo;
+		this.descripcionUnitaria=descripcionUnitaria;
 
 	}
 
@@ -31,7 +46,7 @@ public class Maquina {
 		this.capacidadMaxima = 10000;
 		this.cantidadActual = 0;
 		this.codigo= codigo;
-
+		
 	}
 
 	public String getNombreCerveza() {
@@ -73,16 +88,22 @@ public class Maquina {
 	
 	
 	
-	
-	
-	
-	
-	
+	public String getDescripcionUnitaria() {
+		return descripcionUnitaria;
+	}
 
+	public void setDescripcionUnitaria(String descripcionUnitaria) {
+		this.descripcionUnitaria = descripcionUnitaria;
+	}
+
+	
+	
+	
+	
 	public void imprimir() {
 		String mensaje;
 		mensaje = "Nombre Cerveza: " + nombreCerveza + " ,Descripcion: " + descripcion + " ,Precio por ml: "
-				+ precioPorMl + " ,Capacidad Maxima: " + capacidadMaxima + " ,Cantidad Actual: " + cantidadActual+" ,Codigo: "+ codigo;
+				+ precioPorMl + " ,Capacidad Maxima: " + capacidadMaxima + " ,Cantidad Actual: " + cantidadActual+" ,Codigo: "+ codigo+", Descripcion Unitaria: "+ descripcionUnitaria;
 		System.out.println(mensaje);
 	}
 

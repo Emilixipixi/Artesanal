@@ -7,12 +7,13 @@ public class TestAtributos {
 	public static void main(String[] args) {
 		
 		
-		Maquina rubia=new Maquina("Pilsener","cerveza rubia",0.02,10000,"0001");
+		Maquina rubia=new Maquina("Pilsener","cerveza rubia",0.02,10000,"0001","Descripcion Agregada");
 		
 		rubia.imprimir();
 		
 		rubia.setNombreCerveza("Golden Ale");
 		rubia.setDescripcion("Cerveza con aromas mas intenso");
+		rubia.setDescripcionUnitaria("Descripcion agregada");
 		rubia.imprimir();
 
 	}
